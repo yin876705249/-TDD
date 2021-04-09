@@ -12,12 +12,12 @@ class NewVistorTest(unittest.TestCase): #(1)
 	def test_can_start_a_list_and_retrieve_it_later(self): #(2)
 		# Edith has heard about a cool new online to-do app. She goes
 		# to check out its homepage
-		browser.get('http://localhost:8000')
+		self.browser.get('http://localhost:8000')
 		
 		# she notices the page title and header mention to-do lists
 		self.assertIn('To-Do',self.browser.title) #(4)
 		self.fail('Finish the test!') #(5)
-		browser = webdriver.Firefox()
+		#browser = webdriver.Firefox()
 
 
 if __name__=='__main__': #(6)
