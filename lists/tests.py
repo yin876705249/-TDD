@@ -5,7 +5,7 @@ from django.http import HttpRequest
 
 #from django.template.loader import render_to_string
 from lists.views import home_page #(2)
-from lists.models import Item
+from lists.models import Item,List
 
 class HomePageTest(TestCase):
 	"""
@@ -67,7 +67,7 @@ class ListViewTest(TestCase):
 
 
 
-class ItemModelTest(TestCase):
+class ListAndItemModel(TestCase):
 	def test_saving_and_retrieving_items(self):
 		first_item = Item()
 		first_item.text = 'The first (ever) list item'
